@@ -4,7 +4,7 @@ import CardItem from "../cardItem";
 import foodSize from "../../api/foodSize";
 
 const Main = () => {
-    const [selectedItems, setSelectedItems] = useState([]);
+    const [selectedItems, setSelectedItems] = useState(["fish"]);
     const handleSelect = (id) => {
         const newArr = [...selectedItems];
         const itemIndex = newArr.findIndex(i => i === id);
