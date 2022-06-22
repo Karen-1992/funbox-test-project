@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +7,8 @@
 }
 
 body {
-    /* position: relative; */
     background-image: url("./img/background_image.jpg");
-    /* align-items: center; */
+    min-width: 320px;
 }
 
 .wrapper {
@@ -17,23 +17,21 @@ body {
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .container {
-    /* max-width: 1280px; */
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 0 80px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     font-weight: 700px;
-    border: 1px solid red;
 }
 
 .title {
@@ -45,34 +43,32 @@ section {
 }
 
 .card__item__container {
-    width: 320px;
-    /* min-width: calc(33% - 180px); */
+    position: relative;
+    overflow: hidden;
+
+    min-width: 320px;
     height: 509px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 80px;
-    margin-bottom: 40px;
+    margin: 0 40px;
 }
 
 
 .card__item__container:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
 }
 
-/* @media screen and (max-width: 1280px) {
-    .card__item__container:nth-child(2) {
-        margin-right: 0;
-    }
+.angle {
+    position: absolute;
+    height: 125px;
+    width: 125px;
+    transform: rotate(45deg);
+    top: -65px;
+    left: -80px;
 }
-
-@media screen and (max-width: 900px) {
-    .card__item__container {
-        margin-right: 0;
-    }
-} */
 .card__item__back {
-    background: linear-gradient(135deg, transparent 5%, #fff 5%);
+    background: linear-gradient(135deg, transparent 8%, #fff 5%);
     border-radius: 12px;
 }
 
@@ -86,9 +82,9 @@ section {
     background-color: #fff;
     padding: 21px 48px 0;
     cursor: pointer;
-    /* transition: all .2s; */
-    background: linear-gradient(135deg, transparent 5%, #fff 5%);
+    background: linear-gradient(135deg, transparent 8%, #fff 5%);
 }
+
 .default {
     border: 4px solid #1698D9;
 }
@@ -210,3 +206,8 @@ section {
     color: #E62E7A;
 }
 
+@media screen and (max-width: 1200px) {
+    .card__item__container {
+        margin: 0 40px 40px;
+    }
+}

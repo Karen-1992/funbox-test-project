@@ -74,13 +74,13 @@ const CardItem = ({ item, foodSize, onSelect, selectedItems }) => {
                             <span className="card__item__bonus-number">
                                 {quantity.value}
                             </span>
-                            <span>{quantity.portion}</span>
+                            <span> {quantity.portion}</span>
                         </p>
                         <p className="card__item__bonus">
                             <span className="card__item__bonus-number">
                                 {bonus.value > 0 && bonus.value}
                             </span>
-                            <span>{bonus.text}</span>
+                            <span> {bonus.text}</span>
                         </p>
                         <p className="card__item__bonus">
                             {bonus.status && bonus.status}
@@ -95,6 +95,7 @@ const CardItem = ({ item, foodSize, onSelect, selectedItems }) => {
                     </div>
                 </div>
             </div>
+            <div className={"angle " + classes}></div>
             {description}
         </div>
     );
