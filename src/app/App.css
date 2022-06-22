@@ -52,14 +52,8 @@ section {
     flex-direction: column;
     justify-content: space-between;
     margin: 0 40px;
+    clip-path: polygon(63px 0, 100% 0, 100% 100%, 0 100%, 0 63px);
 }
-
-@supports (clip-path: polygon(63px 0, 100% 0, 100% 100%, 0 100%, 0 63px)) {
-    .card__item__container {
-        clip-path: polygon(63px 0, 100% 0, 100% 100%, 0 100%, 0 63px);
-    }
-}
-
 
 .card__item__container:last-child {
     margin-bottom: 0;
@@ -215,5 +209,10 @@ section {
 @media screen and (max-width: 1200px) {
     .card__item__container {
         margin: 0 40px 40px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .card__item__container {
+        margin: 0 20px 40px;
     }
 }
